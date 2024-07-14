@@ -23,5 +23,5 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           set +e 
-          clang -I -fsanitize=memory -fPIE -pie -O2 -fno-omit-frame-pointer -fsanitize-memory-track-origins -g thread.cc -o ./compiled.out
+          clang -I -fsanitize=memory -fPIE -pie -O2 -fno-omit-frame-pointer -g thread.cc -o ./compiled.out
           ./compiled.out
